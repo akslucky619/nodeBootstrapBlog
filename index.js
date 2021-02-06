@@ -12,7 +12,7 @@ app.use(engine);
 app.set("views", `${__dirname}/views`);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "pages/index.html"));
+  res.render('index');
 });
 
 app.get("/about", (req, res) => {
@@ -25,6 +25,6 @@ app.get("/contact", (req, res) => {
   res.sendFile(path.resolve(__dirname, "pages/contact.html"));
 });
 
-app.listen(4000, () => {
-  console.log("App listening on port 4000");
+app.listen(5000, () => {
+  console.log("App listening on port 5000");
 });
