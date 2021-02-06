@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   res.render('about');
 });
+
 app.get("/post", (req, res) => {
   res.sendFile(path.resolve(__dirname, "pages/post.html"));
 });
