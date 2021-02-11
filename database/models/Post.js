@@ -1,11 +1,11 @@
-import { Schema, model } from "mongoose";
+const mongoose = require("mongoose");
 
-const PostSchema = new Schema({
+const PostSchema = new mongoose.Schema({
   title: String,
   description: String,
   content: String,
 });
 
-const Post = model("Post", PostSchema);
+const Post = mongoose.model("Post", PostSchema);
 
 module.exports = Post;

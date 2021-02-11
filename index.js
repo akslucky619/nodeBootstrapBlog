@@ -8,7 +8,13 @@ const mongoose = require("mongoose");
 
 const app = new express();
 
-mongoose.connect("mongodb://localhost/node-js-blog");
+mongoose.connect(
+  "mongodb://localhost/mediumdata",
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  (err) => {
+    err ? console.log("not connected") : console.log("connected");
+  }
+);
 
 app.use(express.static("public"));
 app.use(engine);
