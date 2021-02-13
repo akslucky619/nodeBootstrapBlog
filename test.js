@@ -2,9 +2,13 @@ const mongoose = require("mongoose");
 
 const Post = require("./database/models/Post");
 
-mongoose.connect('mongodb://localhost/mediumdata',{useNewUrlParser:true, useUnifiedTopology: true}, (err)=>{
-  err? console.log('not connected') : console.log('connected')
-})
+mongoose.connect(
+  "mongodb://localhost/mediumdata",
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  (err) => {
+    err ? console.log("not connected") : console.log("connected");
+  }
+);
 
 Post.create(
   {
