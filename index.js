@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const app = new express();
 
 mongoose.connect(
-  "mongodb://localhost/mediumdata",
+  "mongodb://localhost/node-blog",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     err ? console.log("not connected") : console.log("connected");

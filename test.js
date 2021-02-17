@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Post = require("./database/models/Post");
 
 mongoose.connect(
-  "mongodb://localhost/mediumdata",
+  "mongodb://localhost/node-blog",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     err ? console.log("not connected") : console.log("connected");
